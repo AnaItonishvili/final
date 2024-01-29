@@ -21,6 +21,7 @@
   line-height: 20px;
 }
 .article__wrapper .article__title__wrapper {
+  text-decoration: none;
   display: flex;
   align-items: start;
   justify-content: space-between;

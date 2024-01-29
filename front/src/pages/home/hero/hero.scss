@@ -1,4 +1,4 @@
-.title__wrapper {
+.hero__wrapper {
     border-top: 1px solid rgba(0, 0, 0, 0.34);
     border-bottom: 1px solid rgba(0, 0, 0, 0.34);
     margin-bottom: 20px;
@@ -11,5 +11,9 @@
         font-style: normal;
         font-weight: 700;
         line-height: normal;
+    }
+
+    @media screen and (min-width: 770px) {
+        display: none;
     }
 }

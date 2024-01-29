@@ -26,7 +26,7 @@ function RecentBlogs() {
                 <h2>Recent blog posts</h2>
                 <div className='blogs__wrapper'>
                     {blogs.map(blog => {
-                        return <Article src={blog.src} content={blog.content} title={blog.title} key={blog._id} />
+                        return <Article id={blog._id} src={blog.src} content={blog.content} title={blog.title} key={blog._id} />
                     })}
                 </div>
             </div>

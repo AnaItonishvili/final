@@ -1,14 +1,31 @@
-.header {
+@media screen and (min-width: 770px) {
+  .header__wrapper {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.075);
+  }
+}
+.header__wrapper .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
   margin-bottom: 20px;
 }
-.header .logo {
+@media screen and (min-width: 770px) {
+  .header__wrapper .header {
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 32px;
+  }
+}
+.header__wrapper .header .logo {
   max-width: 50px;
 }
-.header .burger__wrapper {
+@media screen and (min-width: 770px) {
+  .header__wrapper .header .logo {
+    max-width: 150px;
+  }
+}
+.header__wrapper .header .burger__wrapper {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -16,14 +33,14 @@
   background-color: rgba(0, 0, 0, 0.4);
   overflow: hidden;
 }
-.header .burger__wrapper.menu__open {
+.header__wrapper .header .burger__wrapper.menu__open {
   right: 0;
 }
-.header .burger__wrapper.menu__close {
+.header__wrapper .header .burger__wrapper.menu__close {
   right: -100%;
   left: 100%;
 }
-.header .burger__wrapper .burger__menu {
+.header__wrapper .header .burger__wrapper .burger__menu {
   width: 70%;
   position: absolute;
   top: 0;
@@ -33,15 +50,37 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.075);
   padding: 15px 20px;
 }
-.header .burger__wrapper li {
+.header__wrapper .header .burger__wrapper li {
+  margin: 12px 0;
+}
+.header__wrapper .header .burger__wrapper li a {
   color: #080808;
   font-size: 16px;
   font-weight: 600;
   text-decoration: none;
-  margin: 12px 0;
+}
+.header__wrapper .header .desktop__nav {
+  display: none;
+}
+.header__wrapper .header .desktop__nav ul {
+  display: flex;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+  align-items: center;
+}
+.header__wrapper .header .desktop__nav ul a {
+  color: #080808;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
 }
 @media screen and (min-width: 770px) {
-  .header .burger__nav {
+  .header__wrapper .header .desktop__nav {
+    display: block !important;
+  }
+}
+@media screen and (min-width: 770px) {
+  .header__wrapper .header .burger__nav {
     display: none;
   }
 }/*# sourceMappingURL=header.css.map */
