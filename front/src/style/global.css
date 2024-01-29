@@ -22,6 +22,7 @@ footer, header, nav, section, main {
 
 body {
   line-height: 1;
+  font-family: "Montserrat", sans-serif;
 }
 
 ol, ul {
@@ -47,13 +48,15 @@ input {
   border-radius: 0;
 }
 
-#root {
+.page {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 50px;
+  padding-left: 50px !important;
+  padding-right: 50px !important;
 }
 @media screen and (max-width: 770px) {
-  #root {
-    padding: 0 32px;
+  .page {
+    padding-left: 32px !important;
+    padding-right: 32px !important;
   }
 }/*# sourceMappingURL=global.css.map */
