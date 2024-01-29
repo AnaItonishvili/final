@@ -15,7 +15,9 @@ const dbConnection = require('./db/conn');
     try {
         await dbConnection.initializeConnection();
         const blogRoutes = require('./routes/blog');
+        const userRoutes = require("./routes/user");
         app.use('/api', blogRoutes);
+        app.use("/api", userRoutes);
 
         app.listen(PORT, () => {
             console.log(`Server is running on http://localhost:${PORT}`);

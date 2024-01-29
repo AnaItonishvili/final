@@ -1,0 +1,52 @@
+.ui__show__message {
+    position: fixed;
+    right: 50px;
+    z-index: 10;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 20px 54px;
+    pointer-events: none;
+    user-select: none;
+
+    animation: slide-in forwards .3s ease-in-out;
+    strong {
+        font-weight: 500;
+    }
+    &.error {
+        background-color: #f06363;
+        strong {
+            color: whitesmoke;
+        }
+    }
+    &.warning {
+        background-color: #f0ae63;
+        strong {
+            color: whitesmoke;
+        }
+    }
+    &.success {
+        background-color: #73f063;
+        strong {
+            color: whitesmoke;
+        }
+    }
+    &.hiding {
+        animation: slide-out forwards .3s ease-in-out;
+    }
+}
+
+@keyframes slide-in {
+    0% {
+        top: -56px;
+    } 100% {
+        top: 20px;
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        top: 20px;
+    } 100% {
+        top: -56px;
+    }
+}

@@ -5,13 +5,15 @@ import "./header.css";
 import { Link } from "react-router-dom";
 
 import UserIcon from "../../assets/user.svg";
+import { useSelector } from "react-redux";
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
+    const user = useSelector(state => state.user);
     return (
         <header className="header__wrapper">
             <div className="page header">
-                <img className="logo" src={Logo} alt="logo" />
+                <Link to="/"><img className="logo" src={Logo} alt="logo" /></Link>
                 <nav className="burger__nav">
                     <img className="burger" src={Burger} alt="burger" onClick={() => setIsOpen(!isOpen)} />
                     <div onClick={e => e.target.className.includes('burger__wrapper') && setIsOpen(false)} className={`burger__wrapper ${isOpen ? 'menu__open' : 'menu__close'}`}>
@@ -34,7 +36,7 @@ function Header() {
                             <Link to="/blog">Blog</Link>
                         </li>
                         <li className="menu__item">
-                            <Link to="/login"><img src={UserIcon} alt="login" /></Link>
+                            <Link to={user.auth === true ? `/user/${user.userProfile.username}` : '/login'}><img src={UserIcon} alt="login" /></Link>
                         </li>
                     </ul>
                 </nav>
