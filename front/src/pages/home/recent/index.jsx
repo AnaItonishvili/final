@@ -14,7 +14,6 @@ function RecentBlogs() {
             if (data && data.length > 0) {
                 setBlogs(data);
             }
-            console.log(data);
         }
 
         getArticles();

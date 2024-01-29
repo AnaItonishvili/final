@@ -8,7 +8,7 @@ blogRoutes.route("/blogs").get(async (req, res) => {
     try {
         const db = dbo.getDb();
 
-        const data = await db.collection("blogs").find({}).toArray();
+        const data = await db.collection("blogs").find({}).limit(4).toArray();
         res.json(data);
     } catch (err) {
         console.error("Error fetching data from MongoDB:", err);

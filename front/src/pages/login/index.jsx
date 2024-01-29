@@ -64,7 +64,6 @@ function Login() {
       navigate(`/user/${response.data.username}`);
     } catch (error) {
       if (error) {
-        console.log(error)
         dispatch(showError(error.response.data.error));
       }
     }

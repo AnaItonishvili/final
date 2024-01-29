@@ -1,5 +1,6 @@
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
 import OutletWrapper from "./components/layout";
+import Blogs from "./pages/blogs";
 import Home from "./pages/home";
 import Login from "./pages/login";
 import Register from "./pages/register";
@@ -13,6 +14,7 @@ function Router() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/user/:username" element={<UserDash />} />
+                <Route path="/blogs" element={<Blogs />} />
             </Route>
         </>
     );
