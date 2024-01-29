@@ -1,13 +1,13 @@
-import React from 'react'
+import { Outlet } from 'react-router-dom'
 import Header from '../header'
 
-function Layout({ children }) {
+function OutletWrapper() {
     return (
         <>
             <Header />
-            {children}
+            <Outlet />
         </>
     )
 }
 
-export default Layout
+export default OutletWrapper

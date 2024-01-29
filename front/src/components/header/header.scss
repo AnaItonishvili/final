@@ -4,9 +4,11 @@
     align-items: center;
     padding: 20px 0;
     margin-bottom: 20px;
+
     .logo {
         max-width: 50px;
     }
+
     .burger__wrapper {
         position: fixed;
         width: 100%;
@@ -14,13 +16,16 @@
         top: 0;
         background-color: rgba(0, 0, 0, 0.4);
         overflow: hidden;
+
         &.menu__open {
             right: 0;
         }
+
         &.menu__close {
             right: -100%;
             left: 100%;
         }
+
         .burger__menu {
             width: 70%;
             position: absolute;
@@ -31,12 +36,20 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.075);
             padding: 15px 20px;
         }
+
         li {
             color: #080808;
             font-size: 16px;
             font-weight: 600;
             text-decoration: none;
             margin: 12px 0;
+        }
+    }
+
+
+    @media screen and (min-width: 770px) {
+        .burger__nav {
+            display: none;
         }
     }
 }
