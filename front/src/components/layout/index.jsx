@@ -4,6 +4,7 @@ import { Outlet, useNavigate } from 'react-router-dom'
 import { LogIn, LogOut } from '../../redux/slices/userSlice';
 import Header from '../header'
 import NotifyUser from '../notification';
+import Footer from '../footer';
 
 function OutletWrapper() {
   const navigate = useNavigate();
@@ -36,6 +37,7 @@ function OutletWrapper() {
       {shouldShow ? <NotifyUser messages={uiMessages} /> : null}
       <Header />
       <Outlet />
+      <Footer />
     </>
   )
 }

@@ -37,7 +37,7 @@ const PaginationComponent = ({ sortedData, itemsPerPage }) => {
         setPage(page + 1);
     };
 
-    const dataToMap = sortedData.length > 0 ? sortedData : blogs;
+    const dataToMap = sortedData && sortedData.length > 0 ? sortedData : blogs;
     return (
         <div className='pagination__parent'>
             <h2 className="heading">All Blogs</h2>

@@ -66,7 +66,7 @@ function Register() {
   };
 
   return (
-    <section className="page login__wrapper">
+    <section className="page register__wrapper">
       <h2>Sign Up</h2>
       <form onSubmit={handleFormSubmit}>
         <div>

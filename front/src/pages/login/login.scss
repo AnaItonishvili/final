@@ -1,4 +1,6 @@
 .login__wrapper {
+  height: 70vh;
+
   h2 {
     color: #1a1a1a;
     font-size: 24px;
@@ -12,16 +14,19 @@
       font-size: 32px;
     }
   }
+
   form {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+
     label {
       display: block;
       margin-bottom: 10px;
       font-size: 14px;
     }
+
     input {
       font-size: 16px;
       border: none;
@@ -31,6 +36,7 @@
       width: 300px;
       border-radius: 4px;
     }
+
     button {
       display: inline-block;
       padding: 10px 36px;
@@ -56,14 +62,17 @@
         background-color: #242424;
       }
     }
+
     a {
-        color: #1a1a1a;
-        &:hover {
-            color: #2c2c2c;
-        }
-        &:active {
-            color: #242424;
-        }
+      color: #1a1a1a;
+
+      &:hover {
+        color: #2c2c2c;
+      }
+
+      &:active {
+        color: #242424;
+      }
     }
   }
 }

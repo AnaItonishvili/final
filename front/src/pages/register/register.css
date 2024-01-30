@@ -1,4 +1,7 @@
-.login__wrapper h2 {
+.register__wrapper {
+  height: 70vh;
+}
+.register__wrapper h2 {
   color: #1a1a1a;
   font-size: 24px;
   font-style: normal;
@@ -8,22 +11,22 @@
   text-align: center;
 }
 @media screen and (min-width: 770px) {
-  .login__wrapper h2 {
+  .register__wrapper h2 {
     font-size: 32px;
   }
 }
-.login__wrapper form {
+.register__wrapper form {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
-.login__wrapper form label {
+.register__wrapper form label {
   display: block;
   margin-bottom: 10px;
   font-size: 14px;
 }
-.login__wrapper form input {
+.register__wrapper form input {
   font-size: 16px;
   border: none;
   outline: none;
@@ -32,7 +35,7 @@
   width: 300px;
   border-radius: 4px;
 }
-.login__wrapper form button {
+.register__wrapper form button {
   display: inline-block;
   padding: 10px 36px;
   font-size: 16px;
@@ -45,21 +48,21 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.login__wrapper form button:hover {
+.register__wrapper form button:hover {
   background-color: #2c2c2c;
 }
-.login__wrapper form button:focus {
+.register__wrapper form button:focus {
   outline: none;
 }
-.login__wrapper form button:active {
+.register__wrapper form button:active {
   background-color: #242424;
 }
-.login__wrapper form a {
+.register__wrapper form a {
   color: #1a1a1a;
 }
-.login__wrapper form a:hover {
+.register__wrapper form a:hover {
   color: #2c2c2c;
 }
-.login__wrapper form a:active {
+.register__wrapper form a:active {
   color: #242424;
 }/*# sourceMappingURL=register.css.map */
