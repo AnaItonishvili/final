@@ -11,16 +11,16 @@ const userSlice = createSlice({
     reducers: {
         LogIn: (state, payload) => {
             state.auth = true;
-            if (payload.payload === "Unauthorized") {
-                state.auth = false;
-            } else if (payload.payload.username === undefined) {
+            if (payload.payload.username === undefined) {
                 state.userProfile.username = payload.payload.user.username;
             } else {
                 state.userProfile.username = payload.payload.username;
             }
+            state.userProfile.blogs = payload.payload.blogs;
         },
-        LogOut: (state, payload) => {
-
+        LogOut: (state) => {
+            state.auth = false;
+            state.userProfile = {};
         }
     },
 });

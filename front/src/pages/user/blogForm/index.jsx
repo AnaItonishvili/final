@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { showError, showSuccess } from "../../../redux/slices/uiSlice";
 
 function BlogForm() {
@@ -8,6 +8,8 @@ function BlogForm() {
   const [image, setImage] = useState(null);
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+
+  const { username } = useSelector((state) => state.user.userProfile);
 
   const handleImageUpload = (e) => {
     const selectedImage = e.target.files[0];
@@ -52,7 +54,9 @@ function BlogForm() {
     const blogPost = {
       image: image ? image : null,
       title: title,
-      content: content
+      content: content,
+      username: username,
+      createdDate: new Date().toISOString()
     };
 
     try {

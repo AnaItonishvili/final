@@ -12,6 +12,14 @@
     max-height: 300px;
   }
 }
+.article__wrapper .article__date {
+  color: #6941C6;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  margin-bottom: 12px;
+}
 .article__wrapper .date__wrapper {
   margin-bottom: 12px;
   color: #6941C6;

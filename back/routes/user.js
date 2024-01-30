@@ -10,9 +10,11 @@ userRoutes.route("/auth").get(authenticateToken, async (req, res) => {
   try {
     const user = req.user;
 
-    res.status(200).json({ message: "Authentication successful", user });
+    const db = dbo.getDb();
+    const userBlogs = await db.collection("blogs").find({ username: user.username }).toArray();
+
+    res.status(200).json({ message: "Authentication successful", user, blogs: userBlogs });
   } catch (error) {
-    console.error("Authentication error:", error);
 
     if (error.name === "JsonWebTokenError") {
       res.status(403).json({ error: "Authentication failed. Invalid token." });
@@ -41,8 +43,10 @@ userRoutes.route("/login").post(async (req, res) => {
       return res.status(401).json({ error: "Authentication failed. Invalid email or password." });
     }
 
+    const userBlogs = await db.collection("blogs").find({ username: user.username }).toArray();
+
     const token = jwt.sign({ username: user.username }, process.env.jwtSecret, { expiresIn: "1h" });
-    res.cookie("jwt", token, { httpOnly: true, maxAge: 3600000 }).status(200).json({ message: "Authentication successful", username: user.username });
+    res.cookie("jwt", token, { httpOnly: true, maxAge: 3600000 }).status(200).json({ message: "Authentication successful", username: user.username, blogs: userBlogs });
   } catch (err) {
     console.error("Error logging in:", err);
     res.status(500).json({ error: "An error occurred while logging in." });
