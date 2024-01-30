@@ -11,7 +11,7 @@ const PaginationComponent = ({ sortedData, itemsPerPage }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const url = `http://localhost:5000/api/blogs?page=${page}` + (itemsPerPage ? `&limit=${itemsPerPage}` : '');
+                const url = `${import.meta.env.VITE_API_ENDPOINT}/api/blogs?page=${page}` + (itemsPerPage ? `&limit=${itemsPerPage}` : '');
 
                 const response = await axios.get(url);
 

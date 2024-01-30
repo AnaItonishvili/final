@@ -15,7 +15,7 @@ function Blog() {
     useEffect(() => {
         const fetchBlogData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/api/blog/${id}`);
+                const response = await fetch(`${import.meta.env.VITE_API_ENDPOINT}/api/blog/${id}`);
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }

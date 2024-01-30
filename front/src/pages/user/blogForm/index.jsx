@@ -61,7 +61,7 @@ function BlogForm() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/create",
+        `${import.meta.env.VITE_API_ENDPOINT}/api/create`,
         blogPost,
         {
           withCredentials: true,
