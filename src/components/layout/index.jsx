@@ -17,7 +17,7 @@ function OutletWrapper() {
   if (userData.auth === null) {
     const reauthorizeUser = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/auth", {
+        const response = await axios.get(`${import.meta.env.VITE_API_ENDPOINT}/api/auth`, {
           withCredentials: true,
           credentials: "include",
         });

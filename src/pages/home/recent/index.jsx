@@ -9,7 +9,7 @@ function RecentBlogs() {
 
     useEffect(() => {
         async function getArticles() {
-            const request = await axios.get("http://localhost:5000/api/recents");
+            const request = await axios.get(`${import.meta.env.VITE_API_ENDPOINT}/api/recents`);
             const data = request.data;
             if (data && data.length > 0) {
                 setBlogs(data);
