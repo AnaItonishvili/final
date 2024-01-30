@@ -5,6 +5,11 @@
         object-fit: cover;
         object-position: center;
         margin-bottom: 24px;
+        border-radius: 10px;
+
+        &[alt="link"] {
+            margin-bottom: 0;
+        }
 
         @media screen and (min-width: 770px) {
             max-height: 300px;

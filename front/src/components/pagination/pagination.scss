@@ -1,0 +1,81 @@
+.pagination__parent {
+    margin-bottom: 20px;
+
+    .blogs__wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 32px;
+
+        @media screen and (min-width: 770px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    h2 {
+        color: #1A1A1A;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 32px;
+        margin-bottom: 32px;
+
+        @media screen and (min-width: 770px) {
+            font-size: 32px;
+        }
+    }
+
+    .pagination__wrapper {
+        display: flex;
+        justify-content: center;
+        column-gap: 24px;
+        margin-top: 32px;
+
+        .pages__wrapper {
+            display: flex;
+        }
+
+        span {
+            color: #667085;
+            text-align: center;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 20px;
+        }
+
+        .current__page {
+            border-radius: 8px;
+            background-color: #F9F5FF;
+
+            span {
+                color: #7F56D9;
+
+            }
+        }
+
+        .pages__wrapper div {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            color: #5a606e;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 20px;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            cursor: pointer;
+
+            &:disabled {
+                cursor: auto;
+                color: #667085;
+            }
+        }
+    }
+}

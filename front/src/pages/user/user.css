@@ -10,7 +10,7 @@
     margin-bottom: 32px;
   }
 }
-.profile__wrapper h2 {
+.profile__wrapper h2.heading {
   color: #1a1a1a;
   font-size: 24px;
   font-style: normal;
@@ -20,11 +20,11 @@
   text-align: center;
 }
 @media screen and (min-width: 770px) {
-  .profile__wrapper h2 {
+  .profile__wrapper h2.heading {
     font-size: 32px;
   }
 }
-.profile__wrapper h3 {
+.profile__wrapper h3.heading {
   color: #1a1a1a;
   font-size: 20px;
   font-style: normal;
@@ -33,7 +33,7 @@
   margin-bottom: 32px;
 }
 @media screen and (min-width: 770px) {
-  .profile__wrapper h3 {
+  .profile__wrapper h3.heading {
     font-size: 28px;
   }
 }

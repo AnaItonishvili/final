@@ -22,11 +22,11 @@ function UserDash() {
 
   return (
     <section className="page profile__wrapper">
-      <h2>Welcome {username}</h2>
+      <h2 className="heading">Welcome {username}</h2>
       <BlogForm />
       {blogs ?
         <>
-          <h2>Your Blogs</h2>
+          <h2 className="heading">Your Blogs</h2>
           <div className='blogs__wrapper'>
             {blogs.map(blog => {
               return <Article id={blog._id} src={blog.src} content={blog.content} title={blog.title} key={blog._id} date={blog.createdDate} />

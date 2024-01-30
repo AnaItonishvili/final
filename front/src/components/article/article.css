@@ -6,6 +6,10 @@
   -o-object-position: center;
      object-position: center;
   margin-bottom: 24px;
+  border-radius: 10px;
+}
+.article__wrapper img[alt=link] {
+  margin-bottom: 0;
 }
 @media screen and (min-width: 770px) {
   .article__wrapper img {

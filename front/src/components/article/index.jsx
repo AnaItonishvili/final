@@ -2,18 +2,9 @@ import React from 'react'
 import "./article.css";
 import LinkIcon from '../../assets/link.svg';
 import { Link } from 'react-router-dom';
+import formatDate from '../../utils/formatDate';
 
 function Article({ id, src, alt, title, content, date }) {
-    const formatDate = (date) => {
-        const newDate = new Date(date);
-        const options = {
-            weekday: "long",
-            day: "numeric",
-            month: "short",
-            year: "numeric",
-        };
-        return newDate.toLocaleString("en-US", options);
-    };
     return (
         <div className='article__wrapper'>
             <img src={src} alt={alt ? alt : "blog featured image"} />

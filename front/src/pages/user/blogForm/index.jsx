@@ -81,7 +81,7 @@ function BlogForm() {
 
   return (
     <div>
-      <h3>Create a New Blog Post</h3>
+      <h3 className="heading">Create a New Blog Post</h3>
       <form className="blog-form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="image">Upload Image:</label>

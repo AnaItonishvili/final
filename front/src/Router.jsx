@@ -5,6 +5,7 @@ import Home from "./pages/home";
 import Login from "./pages/login";
 import Register from "./pages/register";
 import UserDash from "./pages/user";
+import Blog from "./pages/blog";
 
 function Router() {
     const routes = createRoutesFromElements(
@@ -15,6 +16,7 @@ function Router() {
                 <Route path="/register" element={<Register />} />
                 <Route path="/user/:username" element={<UserDash />} />
                 <Route path="/blogs" element={<Blogs />} />
+                <Route path="/blog/:id" element={<Blog />} />
             </Route>
         </>
     );
